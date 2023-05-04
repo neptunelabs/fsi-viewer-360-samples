@@ -1,0 +1,40 @@
+overview:
+  title: Product Detail Page (PDP)
+  image: logo.png
+  description: Shows how a product detail page with 360° images used looks.
+  facts:
+    - JS built 360° Zoom Viewer
+    - Custom Skin
+    - Product variants
+  order: 1
+sample:
+  template:
+    schema: framework-2023
+    components:
+      menu:
+        template: data/clothing-menu.yml
+      highlight: DEAL OF THE DAY
+      featured:
+        template: data/clothing-featured.yml
+      footer:
+        credits:
+          photos:
+            - author: NeptuneLabs GmbH
+              link: https://www.neptunelabs.com/
+            - author: Photobac
+            - author: Artem Bondarchuk
+              link: https://unsplash.com/@artembondarchuk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+              platform: Unsplash
+          viewer:
+            link: https://www.neptunelabs.com/fsi-viewer/
+      fsi:
+        viewer: true
+        touchZoom: true
+      bootstrap:
+        icons: true
+  mapping:
+    html: "index.html"
+    css: "style.css"
+    js: "script.js"
+playground:
+  deploy: true

@@ -1,0 +1,33 @@
+overview:
+  title: Multi-Axis & Hotspots
+  image: logo.png
+  description: Shows how a product detail page with 360° images, multiple axis and hotspots used looks.
+  facts:
+    - JS built 360° Zoom Viewer
+    - Multi-Axis Spin
+    - Hotspots
+  order: 4
+sample:
+  template:
+    schema: framework-2023
+    components:
+      menu:
+        template: data/misc-menu.yml
+      highlight: DEAL OF THE DAY
+      footer:
+        credits:
+          photos:
+            - author: NeptuneLabs GmbH
+          viewer:
+            link: https://www.neptunelabs.com/fsi-viewer/
+      fsi:
+        viewer: true
+        touchZoom: true
+      bootstrap:
+        icons: true
+  mapping:
+    html: "index.html"
+    css: "style.css"
+    js: "script.js"
+playground:
+  deploy: true
