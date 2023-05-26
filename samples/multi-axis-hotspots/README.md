@@ -7,7 +7,7 @@ In order to display 360° zoom with FSI Viewer, you just need to add the followi
 
 ```html
 <script
-  src='https://docs.neptunelabs.com/fsi/viewer/applications/viewer/js/fsiviewer.js'
+  src='https://fsi.domain.tld/fsi/viewer/applications/viewer/js/fsiviewer.js'
 </script>
 ```
 This will ensure that the FSI Viewer is loaded.
