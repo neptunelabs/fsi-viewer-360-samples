@@ -1,4 +1,4 @@
-# [FSI Viewer 360](https://www.neptunelabs.com) &middot; Samples
+# [FSI Viewer 360](https://www.neptunelabs.com/fsi-viewer-360/) &middot; [Samples][GHPages]
 | ***Pixel-perfect*** | ***High-DPI-ready*** | ***Fast :rocket:*** | ***Hackable*** | ***Consistent*** |
 |:-----------------:|:-------------:|:---------------:|:---------------:|:---------------:|
 
