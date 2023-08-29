@@ -64,7 +64,7 @@ For further information on the FSI Viewer and FSI Server,
 please refer to the official [documentation][Docs].
 
 [License]: https://github.com/neptunelabs/fsi-viewer-360-samples/blob/main/LICENSE
-[Docs]: https://docs.neptunelabs.com/fsi-viewer/latest/
+[Docs]: https://docs.neptunelabs.com/docs/fsi-viewer
 [Server]: https://www.neptunelabs.com/get/
 [Grunt]: https://gruntjs.com/
 [Browsersync]: https://browsersync.io/
