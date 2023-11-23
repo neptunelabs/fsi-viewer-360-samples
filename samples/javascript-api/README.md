@@ -69,6 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
       initialView:'1,13',
       // listen for finished loading FSI Viewer and becomes interactive
       onReady: () => {
+        // set rotate button to pressed
+        instance.clickMenuButton('MouseMode_2')
         // show FSI Viewer instance and hide image
         document.getElementById('zoomEle').style.visibility = 'visible'
         document.getElementById('zoomImg').style.display = 'none'

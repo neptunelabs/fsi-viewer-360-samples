@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
       skin: 'example',
       width: '640',
       height: '427',
-      initialView:'1,13',
       // listen for finished loading FSI Viewer and becomes interactive
       onReady: () => {
         // set rotate button to pressed
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (showTeaser) {
           setTimeout(() => {
-
             instance.setZoom(teaserZoomPercent, true, true)
           }, 500)
         }
