@@ -5,8 +5,7 @@ You can find [an overview of all available parameters in the corresponding docum
 
 This example is a simple demonstration of how to use these methods and callbacks.
 
-To display zoom with FSI Viewer, all you need to do is add the following script to the top of your page
-to the top of your web page:
+To display a spin with FSI Viewer, all you need to do is add the following script to the top of your web page:
 
 ```html
 <script
@@ -57,44 +56,30 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('zoomBtn').addEventListener('click', () => {
 
     let showTeaser = true
-    let teaserZoomPercent = 10
 
     let instance = new $FSI.Viewer('zoomEle', {
       dir: 'images/samples/Shoe/View2',
       debug: false,
-      plugins: 'resize,fullScreen,autoSpin',
+      plugins: 'fullScreen',
       skin: 'example',
       width: '640',
       height: '427',
-      initialView:'1,13',
       // listen for finished loading FSI Viewer and becomes interactive
       onReady: () => {
-        // set rotate button to pressed
-        instance.clickMenuButton('MouseMode_2')
         // show FSI Viewer instance and hide image
         document.getElementById('zoomEle').style.visibility = 'visible'
         document.getElementById('zoomImg').style.display = 'none'
         document.getElementById('zoomBtn').style.display = 'none'
-
-        if (showTeaser) {
-          setTimeout(() => {
-
-            instance.setZoom(teaserZoomPercent, true, true)
-          }, 500)
-        }
-      },
-      // listen when zoom is finished
-      onViewChanged: (view) => {
         if (showTeaser) {
           showTeaser = false
+
           setTimeout(() => {
-            // reset viewer - the user can interact with the UI
-            instance.resetView()
-          }, 800)
+            instance.spinToTarget(12, 1, 80)
+          }, 400)
+
           setTimeout(() => {
-            // reset viewer - the user can interact with the UI
-            instance.startAutoSpin()
-          }, 1500)
+            instance.spinToTarget(0, 1, 80)
+          }, 1000)
         }
       },
     })
@@ -102,7 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
     instance.start()
 
   })
+
 })
+
 
 ```
 
@@ -111,11 +98,6 @@ A click on the `zoomBtn` element will initialise a new FSI Viewer element in the
 With the `onReady` callback (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/callbacks#onready)) we ensure a smooth transition:
 Only when the viewer is ready will the viewer element will be set to visible, while the image and button are set to `display:none`.
 
-If `showTeaser` is true, the method `setZoom` will be executed: `instance.setZoom(teaserZoomPercent, true, true)` (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/public-methods#setZoom)).
-
-
-The callback `onViewChanged` (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/callbacks#onviewchanged)) listens when the zoom is finished,
-sets `showTeaser` to false and uses the `resetView` method (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/public-methods#resetview)).
-We also execute the method to start the auto rotation: `startAutoSpin` (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/public-methods#startautospin)).
+If `showTeaser` is true, the method `spinToTarget` will be executed: `instance.spinToTarget(12, 1, 80)` (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/public-methods#spintotarget)).
 
 It is important to use the `start()` method afterwards, as it is mandatory for the viewer initialisation (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/public-methods#start)).
