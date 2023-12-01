@@ -57,7 +57,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let showTeaser = true
 
-    let instance = new $FSI.Viewer('zoomEle', {
+    const show = () => {
+      // show FSI Viewer instance and hide image
+      document.getElementById('zoomEle').style.visibility = 'visible'
+      document.getElementById('zoomImg').style.display = 'none'
+      document.getElementById('zoomBtn').style.display = 'none'
+      if (showTeaser) {
+        showTeaser = false
+
+        setTimeout(() => {
+          instance.spinToTarget(12, 1, 80)
+        }, 400)
+
+        setTimeout(() => {
+          instance.spinToTarget(0, 1, 80)
+        }, 1000)
+      }
+    }
+
+    const instance = $FSI.createNode("fsi-viewer", {
       dir: 'images/samples/Shoe/View2',
       debug: false,
       plugins: 'fullScreen',
@@ -65,39 +83,19 @@ document.addEventListener('DOMContentLoaded', () => {
       width: '640',
       height: '427',
       // listen for finished loading FSI Viewer and becomes interactive
-      onReady: () => {
-        // show FSI Viewer instance and hide image
-        document.getElementById('zoomEle').style.visibility = 'visible'
-        document.getElementById('zoomImg').style.display = 'none'
-        document.getElementById('zoomBtn').style.display = 'none'
-        if (showTeaser) {
-          showTeaser = false
-
-          setTimeout(() => {
-            instance.spinToTarget(12, 1, 80)
-          }, 400)
-
-          setTimeout(() => {
-            instance.spinToTarget(0, 1, 80)
-          }, 1000)
-        }
-      },
+      onReady: show
     })
-
-    instance.start()
-
+    document.getElementById('zoomEle').appendChild(instance)
   })
 
 })
-
-
 ```
 
 A click on the `zoomBtn` element will initialise a new FSI Viewer element in the `zoomEle` element.
 
-With the `onReady` callback (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/callbacks#onready)) we ensure a smooth transition:
+We create `show` that is called when the `onReady` callback is executed (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/callbacks#onready)) we ensure a smooth transition:
 Only when the viewer is ready will the viewer element will be set to visible, while the image and button are set to `display:none`.
 
-If `showTeaser` is true, the method `spinToTarget` will be executed: `instance.spinToTarget(12, 1, 80)` (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/public-methods#spintotarget)).
+If `showTeaser` is true, the method `setZoom` will be executed: `instance.setZoom(teaserZoomPercent, true, true)` (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/public-methods#setzoom)).
 
-It is important to use the `start()` method afterwards, as it is mandatory for the viewer initialisation (see [documentation](https://docs.neptunelabs.com/docs/fsi-viewer/js-api/public-methods#start)).
+For initialization, we use `$FSI.createNode` which creates the <fsi-viewer> custom tag which is appended to the `zoomEle` element.
