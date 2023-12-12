@@ -12,7 +12,7 @@ FSI Viewer 360 can be created and controlled as a simple HTML tag and/or through
 
 This repository contains examples on how to use and build your own applications.
 
-![Project Image](project.apng)
+[![Project Image](project.apng)][GHPages]
 
 ## Getting Started
 
