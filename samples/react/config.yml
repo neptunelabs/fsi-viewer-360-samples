@@ -1,19 +1,27 @@
 overview:
   title: React Test
   image: logo.png
-  description: Shows how FSI components can be implemented in React
+  description: Shows how FSI components can be implemented in React.
   order: 10
   facts:
-    - Sample component
+    - Sample component containing FSI Viewer 360
     - FSI Component
 sample:
   template:
     schema: react-taupe
     components:
-      menu:
-        template: data/furniture-menu.yml
+      react:
+        theme: data/clothing.yml
+        data:
+          highlight: REACT OF THE DAY
+          credits:
+            photos:
+              - author: 360°
+                link: https://www.neptunelabs.com
+                platform: NeptuneLabs
+            viewer:
+              link: https://www.neptunelabs.com/fsi-viewer/
       fsi:
         viewer: true
-      react: true
       bootstrap:
         icons: true
