@@ -6,22 +6,20 @@ overview:
   facts:
     - Sample component containing FSI Viewer 360
     - FSI Component
+schema: react-taupe
 sample:
-  template:
-    schema: react-taupe
-    components:
-      react:
-        theme: data/clothing.yml
-        data:
-          highlight: REACT OF THE DAY
-          credits:
-            photos:
-              - author: 360°
-                link: https://www.neptunelabs.com
-                platform: NeptuneLabs
-            viewer:
-              link: https://www.neptunelabs.com/fsi-viewer/
-      fsi:
-        viewer: true
-      bootstrap:
-        icons: true
+  menu:
+    data: clothing-menu.yml
+  highlight: REACT OF THE DAY
+  footer:
+    credits:
+      photos:
+        - author: 360°
+          link: https://www.neptunelabs.com
+          platform: NeptuneLabs
+      viewer:
+          link: https://www.neptunelabs.com/fsi-viewer/
+  fsi:
+    viewer: true
+  bootstrap:
+    icons: true

@@ -7,28 +7,26 @@ overview:
     - Custom Skin
     - Product variants
   order: 1
+schema: bootstrap-taupe
 sample:
-  template:
-    schema: bootstrap-taupe
-    components:
-      menu:
-        template: data/clothing-menu.yml
-      highlight: DEAL OF THE DAY
-      featured:
-        template: data/clothing-featured.yml
-      footer:
-        credits:
-          photos:
-            - author: NeptuneLabs GmbH
-              link: https://www.neptunelabs.com/
-            - author: Photobac
-            - author: Artem Bondarchuk
-              link: https://unsplash.com/@artembondarchuk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-              platform: Unsplash
-          viewer:
-            link: https://www.neptunelabs.com/fsi-viewer/
-      fsi:
-        viewer: true
-        touchZoom: true
-      bootstrap:
-        icons: true
+  menu:
+    data: clothing-menu.yml
+  highlight: DEAL OF THE DAY
+  featured:
+    data: clothing-featured.yml
+  footer:
+    credits:
+      photos:
+        - author: NeptuneLabs GmbH
+          link: https://www.neptunelabs.com/
+        - author: Photobac
+        - author: Artem Bondarchuk
+          link: https://unsplash.com/@artembondarchuk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+          platform: Unsplash
+      viewer:
+        link: https://www.neptunelabs.com/fsi-viewer/
+  fsi:
+    viewer: true
+    touchZoom: true
+  bootstrap:
+    icons: true
