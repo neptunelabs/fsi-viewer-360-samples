@@ -8,6 +8,8 @@ overview:
     - JS API Demonstration
 schema: bootstrap-taupe
 sample:
+  hero:
+    data: clothing-hero.yml
   menu:
     data: clothing-menu.yml
   featured:
