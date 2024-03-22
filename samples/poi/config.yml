@@ -7,28 +7,20 @@ overview:
     - Points Of Interest
     - Thumbnail Labels
   order: 3
+schema: bootstrap-taupe
 sample:
-  template:
-    schema: framework-2023
-    components:
-      menu:
-        template: data/misc-menu.yml
-      highlight: HIGHLIGHT OF THE DAY
-      footer:
-        credits:
-          photos:
-            - author: 360ties GmbH
-          viewer:
-            link: https://www.neptunelabs.com/fsi-viewer/
-      fsi:
-        viewer: true
-        touchZoom: true
-        thumbBar: true
-      bootstrap:
-        icons: true
-  mapping:
-    html: "index.html"
-    css: "style.css"
-    js: "script.js"
-playground:
-  deploy: true
+  menu:
+    data:misc-menu.yml
+  highlight: HIGHLIGHT OF THE DAY
+  footer:
+    credits:
+      photos:
+        - author: 360ties GmbH
+      viewer:
+        link: https://www.neptunelabs.com/fsi-viewer/
+  fsi:
+    viewer: true
+    touchZoom: true
+    thumbBar: true
+  bootstrap:
+    icons: true

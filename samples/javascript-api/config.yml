@@ -1,32 +1,29 @@
 overview:
-  title: Product Detail Page (PDP)
+  title: JavaScript API
   image: logo.png
-  description: Shows how a product detail page with 360° images used looks.
+  description: Learn how to use the JavaScript Viewer API with a simple demo.
+  order: 98
   facts:
-    - JS built 360° Zoom Viewer
-    - Custom Skin
-    - Product variants
-  order: 1
+    - JS built FSI Viewer
+    - JS API Demonstration
 schema: bootstrap-taupe
 sample:
+  hero:
+    data: clothing-hero.yml
   menu:
     data: clothing-menu.yml
-  highlight: DEAL OF THE DAY
   featured:
     data: clothing-featured.yml
+  highlight: DEAL OF THE DAY
   footer:
     credits:
       photos:
-        - author: NeptuneLabs GmbH
-          link: https://www.neptunelabs.com/
-        - author: Photobac
         - author: Artem Bondarchuk
           link: https://unsplash.com/@artembondarchuk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
           platform: Unsplash
       viewer:
-        link: https://www.neptunelabs.com/fsi-viewer/
+          link: https://www.neptunelabs.com/fsi-viewer/
   fsi:
     viewer: true
-    touchZoom: true
   bootstrap:
     icons: true
