@@ -1,9 +1,14 @@
-# [FSI Viewer 360](https://www.neptunelabs.com/fsi-viewer-360/) &middot; [Samples][GHPages]
+# FSI Viewer 360 Samples
 | ***Pixel-perfect*** | ***High-DPI-ready*** | ***Fast :rocket:*** | ***Hackable*** | ***Consistent*** |
 |:-----------------:|:-------------:|:---------------:|:---------------:|:---------------:|
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)][License]
 
+---
+
+* [Live Samples @ GitHub Pages 🔗][GHPages]
+* [FSI Viewer 360 - Product Page 🔗](https://www.neptunelabs.com/fsi-viewer-360/)
+* [Documentation 🔗][Docs]
 
 FSI Viewer 360 renders any number of images as a 360 degree object.
 You can zoom in on every detail from every angle and the required image data is streamed on demand, ensuring ultra-fast load times even on mobile devices.
